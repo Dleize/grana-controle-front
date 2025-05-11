@@ -1,0 +1,10 @@
+services:
+  grana-controle-front:
+    build:
+      context: ./grana-controle-front
+    ports:
+      - "5173:80"
+    environment:
+      - GRANA_CONTROLE_BACK:http://localhost:3000
+    depends_on:
+      - grana-controle-back
